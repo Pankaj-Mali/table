@@ -1,0 +1,78 @@
+@layer tailwind-base, my-custom-styles;
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer my-custom-styles {
+
+@tailwind utilities;
+
+.table.table-expandable tbody ~ tbody {
+    border-top-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+  }
+
+  .table.table-expandable tbody tr :where(th, td) {
+    border-bottom-width: 0;
+  }
+
+
+  .table {
+    @apply w-full text-sm;
+  }
+
+  .table thead {
+    @apply text-xs text-gray-700 uppercase bg-gray-50;
+  }
+
+  .table thead th,
+  .table tbody td {
+    @apply py-3 px-6;
+  }
+
+  .table tbody tr {
+    @apply border-b;
+  }
+
+  .btn-disabled,
+  .btn[disabled] {
+    @apply pointer-events-none bg-gray-400 hover:bg-gray-500;
+  }
+  .btn-primary {
+    @apply bg-blue-500 text-white;
+  }
+  .btn-primary:hover {
+    @apply bg-blue-700;
+  }
+  .btn-secondary {
+    @apply text-white;
+  }
+  .btn-secondary:hover {
+    @apply bg-indigo-700;
+  }
+  .btn-info {
+    @apply bg-slate-500 hover:bg-slate-700 text-white;
+  }
+  .btn-info:hover {
+    @apply bg-slate-700;
+  }
+  .btn-success {
+    @apply bg-green-500 text-white;
+  }
+  .btn-success:hover {
+    @apply bg-green-700;
+  }
+  .btn-warning {
+    @apply bg-orange-500 text-white;
+  }
+  .btn-warning:hover {
+    @apply bg-orange-700;
+  }
+  .btn-error {
+    @apply bg-red-500 hover:bg-red-700 text-white;
+  }
+
+
+/* This file is for your main application CSS */
+}
