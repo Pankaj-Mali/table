@@ -51,8 +51,6 @@ defmodule TableWeb.Component.Table do
 
   @impl true
   def render(%{rows: []} = assigns) do
-
-  end
     if [] != assigns.empty do
       ~H"""
       <div>
